@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>calculator</title>
+<style>
+body{
+margin-left:400px;
+margin-bottom:200px;
+width:1000px;
+height:800px;
+background-color:black;
+}
+input[type="text"]{
+text-align:left;
+color:red;
+font-style:Trebuchet MS;
+font-size:20px;
+width:98%;
+height:50px;
+background-color:white;
+border-radius: 15px;
+
+}
+input[type="button"]{
+padding:15px;
+width:24%;
+background-color:skyblue;
+border-radius: 3px;
+font-size:15px;
+border-radius: 20px;
+
+}
+.calculator{
+box-shadow: 0px 0px 0px 5px white;
+padding:12px;
+align-content:center;
+width:400px;
+height:400px;
+background-color: #FAB41E;
+border-radius:5px;
+
+}
+
+h1{
+box-shadow: 0px 0px 0px 5px white;
+width:425px;
+height:50px;
+color:white;
+background-color:#FAB41E;
+border-radius:5px;
+text-align:center;
+
+}
+button:hover{
+ background-color: yellow;
+}
+</style>
+</head>
+<body>
+<div>
+<h1 >Faiyaz's Calculator</h1>
+</div>
+<div class="wrap">
+<form name="cal" class="calculator">
+<input type="text" name="display" placeholder="Enter text"><br><br>
+<input type="button" value=9 onclick="cal.display.value+='9'">
+<input type="button" value=8 onclick="cal.display.value+='8'">
+<input type="button" value=7 onclick="cal.display.value+='7'">
+<input type="button" value=+ onclick="cal.display.value+='+'">
+
+
+<br><br>
+<input type="button" value=6 onclick="cal.display.value+='6'">
+<input type="button" value=5 onclick="cal.display.value+='5'">
+<input type="button" value=4 onclick="cal.display.value+='4'">
+<input type="button" value=- onclick="cal.display.value+='-'">
+
+
+<br><br>
+<input type="button" value=3 onclick="cal.display.value+='3'">
+<input type="button" value=2 onclick="cal.display.value+='2'">
+<input type="button" value=1 onclick="cal.display.value+='1'">
+<input type="button" value=x onclick="cal.display.value+='*'">
+
+<br><br>
+<input type="button" value=. onclick="cal.display.value+='.'">
+<input type="button" value=0 onclick="cal.display.value+='0'">
+<input type="button" value=% onclick="cal.display.value+='%'">
+<input type="button" value=/ onclick="cal.display.value+='/'">
+<br><br>
+<input type="button" id="low" value=AC onclick="cal.display.value=''">
+<input type="button" id="low" value=<- onclick="cal.display.value=cal.display.value.substring(0,cal.display.value.length-1)">
+<input type="button" id="low" value== onclick="cal.display.value=eval(cal.display.value)">
+
+
+</form>
+</div>
+
+
+</body>
+</html>
